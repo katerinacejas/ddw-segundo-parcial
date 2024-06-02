@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Parcial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="images/logo.png">
+</head>
+<body>
+    <!-- encabezado fijo con la navegación -->
+    <header class="encabezado display_flex items_centro">
+        <div class="flex_horizontal items_centro">
+            <a href="#">
+                <img src="images/logo.png" class="imagen_noventa logo_espacios" alt="logo">
+            </a>
+            <h1>k_astrospedia</h1>
+        </div>
+
+        <!-- navegacion -->
+        <nav class="width_completo">
+            <ul class="flex_horizontal margen_horizontal items_centro barrita_navegacion fondo_circular">
+                <li><a href="#signos">Signos</a></li>
+                <li><a href="#planetas">Planetas</a></li>
+                <li><a href="#ustedes">¡Ustedes!</a></li>
+            </ul>
+        </nav>
+        <div class="perfil">
+            <img src="images/perfil.png" alt="perfil">
+        </div>
+    </header>
+    <!-- cuerpo principal de la pagina -->
+
+    <main>
+        <!-- bloque de proximos eventos/funcionalidades (no pertenece al menu, es para que el ancla del bloque signos desplace un poco la pagina)-->
+        <section class="margen_entre_bloques">
+            <h2 class="texto_center">¡Próximamente!</h2>
+            <section class="flex_horizontal display_flex width_completo margen_horizontal_proximamente items_centro">
+                <div>
+                    <div class="card_cambia_visibilidad card_sombra">
+                        <p class="texto_card_visibilidad">La carta astral es un mapa que explica la personalidad de una persona, teniendo en cuenta la posición de los planetas, el sol y la luna en relación con la Tierra. Ofreceremos una lectura personalizada de la carta astral, junto con respuestas a todas las dudas que surjan.</p>
+                        <img src="images/carrusel_novedades/carta_astral.jpg" class="imagen_grilla contenedor_bordes_circulares_2 bordes_violeta" alt="carta astral">
+                    </div>
+                    <h3 class="texto_center">Lectura de Cartas Astrales</h3>
+                </div>
+                <div>
+                    <div class="card_cambia_visibilidad card_sombra">
+                        <p class="texto_card_visibilidad">Brindaremos todos los domingos por la noche el horóscopo de todos los signos. Tener en cuenta que el horóscopo no es algo fijo, se debe dar atención a aquello que le resuene.</p>
+                        <img src="images/carrusel_novedades/horoscopo_semanal.jpg" class="imagen_grilla contenedor_bordes_circulares_2 bordes_violeta" alt="horoscopo semanal">
+                    </div>
+                    <h3 class="texto_center">Horóscopo Semanal</h3>
+                </div>
+                <div>
+                    <div class="card_cambia_visibilidad card_sombra">
+                        <p class="texto_card_visibilidad">La numerología es tu llave para desbloquear el misterio de tu vida. Con solo tus números de nacimiento y nombre, descubre tus fortalezas, desafíos y oportunidades futuras. ¡Descubre tu verdadero potencial!</p>
+                        <img src="images/carrusel_novedades/numerologia.jpg" class="imagen_grilla contenedor_bordes_circulares_2 bordes_violeta" alt="numerologia">
+                    </div>
+                    <h3 class="texto_center">Numerología</h3>
+                </div>
+            </section>
+        </section>
+
+        <hr>
+
+        <!-- bloque signos-->
+        <section id="signos" class="margen_entre_bloques ancla_para_nav_fijo">
+            <h2 class="texto_center">Signos</h2>
+            <p class="margen_entre_parrafos">La <strong>astrología y signos zodiacales</strong> siempre han suscitado interés en el ser humano desde la antigüedad. La influencia que los cuerpos celestes ejercen sobre la personalidad y el destino tiene especial importancia en la vida de las personas. Todo esto está marcado por el día en el que se nace, de forma que se asignará un signo u otro.</p>
+            <p class="margen_entre_parrafos">Cada uno tiene unas fortalezas y elementos que pueden influir en la personalidad y en cómo se interactúa con el resto de las personas</p>
+            <p class="margen_entre_parrafos">Existen un total de doce signos del Zodiaco en el mundo occidental: Aries, Tauro, Géminis, Cáncer, Leo, Virgo, Libra, Escorpio, Sagitario, Capricornio, Acuario y Piscis . Todos ellos guardan unas características propias, que marcan la personalidad de cada uno.</p>
+            <section class="flex_horizontal items_space_around_stretch margen_secciones_intros margen_horizontal_bloques flex_wrap">
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/aries.jpg"  alt="Aries">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Aries</h3>
+                            <p class="cursiva texto_center">21 de marzo — 20 de abril</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Llenos de energía y entusiasmo por la vida. Aventureros por naturaleza, les encantan los retos, la libertad y las nuevas ideas, por lo que nunca tienen miedo a los comienzos o nuevas etapas. Son líderes y prefieren dar órdenes en vez de recibirlas. Suelen ser tercos e inquietos. Es muy fácil que malinterpreten algo y se ofendan rápido. Es complicado hacer las paces con ellos. Siempre lucharán si creen que la causa merece la pena.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/tauro.jpg"  alt="Tauro">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Tauro</h3>
+                            <p class="cursiva texto_center">21 de abril — 21 de mayo</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Tienen una gran fuerza de voluntad, son prácticos y decididos en la toma de decisiones. Suelen ser personas estables y conservadoras y no dudan en seguir a un líder si les despierta confianza. Suelen respetar las leyes y normas. El hecho de que tengan entusiasmo por la rutina y la continuidad hace que sean algo tozudos y de ideas fijas. No suelen hundirse en las dificultades y siempre salen adelante. Amantes de la buena comida, bebida y distintos placeres de la vida.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/geminis.jpg"  alt="Geminis">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Géminis</h3>
+                            <p class="cursiva texto_center">22 de mayo — 22 de junio</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Carácter doble, complejo y contradictorio. Empiezan con entusiasmo nuevas aventuras, pero tienden a aburrirse rápido por la falta de constancia. Son personas cariñosas, amables y generosas , aunque tienen algo de mentirosos si quieren obtener algo. Suelen ser personas que se desaniman con facilidad ante las dificultades, por lo que necesitan escuchar halagos y recibir atención. Inteligencia y capacidad para aprender. Ingeniosos y muy comunicativos</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/cancer.jpg"  alt="Cáncer">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Cáncer</h3>
+                            <p class="cursiva texto_center">23 de Junio — 22 de Julio</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Son personas complicadas de clasificar, si se atiende a su carácter. Los hay tímidos y aburridos , pero también brillantes y famosos. De hecho, algunos presentan una alta capacidad literaria y artística, gracias a su capacidad imaginativa. Les encanta ser extrovertidos, pero también tienen tendencia a retraerse. El hogar es lo más importante para ellos, por la seguridad y el calor que encuentran en él.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/leo.jpg"  alt="Leo">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Leo</h3>
+                            <p class="cursiva texto_center">23 de Julio — 22 de Agosto</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Es el signo más dominante del Zodiaco. Es creativo y extrovertido. Tienen ambición, fuerza, valentía y seguridad en sus capacidades. No temen a los obstáculos y suelen ser buenos, idealistas e inteligentes. Para los Leo , el lujo y el poder están entre sus gustos. Asimismo, son capaces de utilizar trucos y mentiras para desacreditar a sus enemigos. A veces, también pueden caer en la superioridad y la prepotencia.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/virgo.jpg"  alt="Virgo">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Virgo</h3>
+                            <p class="cursiva texto_center">23 de Agosto — 22 de Septiembre</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Es el único signo zodiacal representado por una mujer. Los Virgo son observadores, pacientes y les cuesta hacer amigos por su carácter frío que muestran a veces. A pesar de ello tienen encanto y suelen ayudar a los demás cuando se presenta un problema. El método, el estudio y la lógica predominan en ellos, por eso les gusta aprender siempre, así como tener un análisis de la situación. Tanto se paran a pensar que a veces pueden retrasar la conclusión de los proyectos más complicados que llevan a cabo. Son intuitivos y capaces de ver todos los lados de un argumento.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/libra.jpg"  alt="Libra">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Libra</h3>
+                            <p class="cursiva texto_center">23 de Septiembre — 22 de Octubre</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">El signo del Zodiaco más civilizado. Tienen encanto, elegancia, buen gusto y son amables y pacíficos, por lo que no es raro que ante conflictos sean imparciales y muestren su rechazo a ellos. Valoran el esfuerzo de los demás y les gusta trabajar en equipo. El lado negativo de Libra es que de lo curiosos que son a veces se entrometen en la vida de los demás . Están en contra de la rutina, y una vez que tengan una opinión de algo no les gusta que se les contradiga.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/escorpio.jpg"  alt="Escorpio">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Escorpio</h3>
+                            <p class="cursiva texto_center">23 de Octubre — 22 de Noviembre</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Un Escorpio es una persona tranquila que parece alejada de la realidad, aunque nunca dejan de observar todo a su alrededor con el ojo crítico. Tienen mucha fuerza de voluntad y muestran tenacidad , pero también les afecta al estado de ánimo las circunstancias que les rodean. Suelen ser críticos y esto les lleva, a veces, a ser algo resentidos con los demás. Sin embargo son excelentes amigos de aquellos a los que consideran que merecen su respeto.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/sagitario.jpg"  alt="Sagitario">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Sagitario</h3>
+                            <p class="cursiva texto_center">23 de Noviembre — 22 de Diciembre</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Sagitario es el signo más positivo de todo el Zodiaco . Cuando las cosas se ponen complicadas un Sagitario siempre sacará la mejor versión y se olvidará de la negatividad. Entre sus mejores características están las de ser buenos organizadores y abarcar nuevos proyectos y aprender cosas nuevas. El lado negativo es el genio que pueden mostrar a veces, sobre todo cuando detectan que alguien no va a su ritmo. Muchas veces también son exigentes con los demás , porque cuando un objetivo se les pone enfrente no dudan en sacrificarse.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/capricornio.jpg"  alt="Capricornio">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Capricornio</h3>
+                            <p class="cursiva texto_center">23 de Diciembre — 21 de Enero</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Estabilidad, seguridad y tranquilidad es lo que mejor define a un Capricornio. Son personas justas y exigentes con los demás, porque también lo son con ellos mismos. Suelen perder el control de sus emociones, por lo que es fácil que sean pesimistas y melancólicos, pero siempre tratan de buscar ayuda. Por eso es recomendable que mantengan la estabilidad emocional a través de la meditación, respiración o actividades que les ayuden a relajarse.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/acuario.jpg"  alt="Acuario">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Acuario</h3>
+                            <p class="cursiva texto_center">22 de Enero — 20 de Febrero</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Los Acuario tienen una personalidad fuerte y atractiva, pero hay dos tipos: los que son tímidos, sensibles y pacientes; y los que son exuberantes, vivos y frívolos. Eso sí, ambos son honestos y no dudarán en cambiar su opinión si estaban equivocados. Es el signo más tolerante de los doce, pero tampoco les gusta pertenecer a la multitud. Muchas veces sienten la necesidad de retirarse para meditar. No hacen amigos con facilidad, a pesar de la personalidad abierta que tienen.</p>
+                </article>
+                <article class="width_flex_wrap">
+                    <div class="flex_horizontal width_completo imagenes items_centro">
+                        <img src="images/signos/piscis.jpg"  alt="Piscis">
+                        <div class="width_completo">
+                            <h3 class="texto_center">Piscis</h3>
+                            <p class="cursiva texto_center">21 de Febrero — 19 de Marzo</p>
+                       </div>
+                    </div>
+                    <p class="margen_entre_parrafos">Son tranquilos, amables y pacientes. Los Piscis son sensibles a los sentimientos de los demás y responden con simpatía al tacto y al sufrimiento. Son queridos por el resto de los signos, debido al carácter afable, cariñoso y amable. Les preocupan más los problemas de los demás que los suyos propios. Eso sí, les cuesta mucho luchar por el poder establecido. Son creativos y artísticos.</p>
+                </article>
+            </section>
+        </section>
+
+        <hr>
+
+        <!-- bloque planetas-->
+        <section id="planetas" class="margen_entre_bloques ancla_para_nav_fijo">
+            <h2 class="texto_center">Planetas</h2>     
+            <!-- Contenedor secundario para la tabla de planetas retrogrados -->
+            <aside>
+                <table>
+                    <tr class="header_tabla">
+                        <th colspan="4">Períodos de retrogradación de los planetas en 2024</th>
+                    </tr>
+                    <tr>
+                        <th>Planeta Retrógado</th>
+                        <th>Comienzo</th>
+                        <th>Fin</th>
+                        <th>Signo</th>
+                    </tr>
+                    <tr>
+                        <td>Mercurio</td>
+                        <td>13/12/2023</td>
+                        <td>02/02/2024</td>
+                        <td>Capricornio y Sagitario</td>
+                    </tr>
+                    <tr>
+                        <td>Urano</td>
+                        <td>28/08/2023</td>
+                        <td>27/01/2024</td>
+                        <td>Tauro</td>
+                    </tr>
+                    <tr>
+                        <td>Mercurio</td>
+                        <td>02/04/2024</td>
+                        <td>25/04/2024</td>
+                        <td>Aries</td>
+                    </tr>
+                    <tr>
+                        <td>Plutón</td>
+                        <td>02/05/2024</td>
+                        <td>11/10/2024</td>
+                        <td>Acuario y Capricornio</td>
+                    </tr>
+                    <tr>
+                        <td>Saturno</td>
+                        <td>29/06/2024</td>
+                        <td>15/11/2024</td>
+                        <td>Piscis</td>
+                    </tr>
+                    <tr>
+                        <td>Neptuno</td>
+                        <td>02/07/2024</td>
+                        <td>07/12/2024</td>
+                        <td>Piscis</td>
+                    </tr>
+                    <tr>
+                        <td>Mercurio</td>
+                        <td>07/08/2024</td>
+                        <td>28/08/2024</td>
+                        <td>Virgo y Leo</td>
+                    </tr>
+                    <tr>
+                        <td>Urano</td>
+                        <td>01/09/2024</td>
+                        <td>30/01/2025</td>
+                        <td>Tauro</td>
+                    </tr>
+                    <tr>
+                        <td>Júpiter</td>
+                        <td>09/10/2024</td>
+                        <td>04/02/2025</td>
+                        <td>Géminis</td>
+                    </tr>
+                    <tr>
+                        <td>Mercurio</td>
+                        <td>26/11/2024</td>
+                        <td>15/12/2024</td>
+                        <td>Sagitario</td>
+                    </tr>
+                    <tr class="ultima_fila_tabla">
+                        <td>Marte</td>
+                        <td>06/12/2024</td>
+                        <td>23/02/2025</td>
+                        <td>Leo y Cáncer</td>
+                    </tr>
+                </table>
+            </aside>       
+            <section>
+                <p class="margen_entre_parrafos">La astrología considera que la humanidad no sólo está influenciada por los factores hereditarios y por el medio ambiente, sino también por el <strong>estado de nuestro sistema solar</strong> en el momento del nacimiento. Los <strong>planetas</strong> se consideran las fuerzas básicas de la vida, las herramientas que utilizamos para vivir, así como la base de nuestra misma sustancia. Estas fuerzas planetarias toman distintas formas, dependiendo de su ubicación en el zodíaco y de la manera en que se relacionan entre ellas.</p>
+                <p class="margen_entre_parrafos">Los aspectos que se forman entre los planetas describen estas relaciones; la posición de los planetas en relación con el lugar de nacimiento nos habla de su expresión en las esferas de la vida descriptas por las casas astrológicas.</p>
+                <p class="margen_entre_parrafos">Interpretando el rol de estos actores (los planetas) y sus cualidades (los elementos, signos y casas) y creando una síntesis, la astrología puede presentar un cuadro completo y comprensivo de la persona y su potencial, basado en el horóscopo natal.</p>
+                <p class="margen_entre_parrafos">En la astrología hay 10 planetas, los cuales incluyen al Sol y la Luna, conocidos como las luminarias. Dichos planetas no incluyen a la Tierra. A su vez, cada planeta corresponde con un signo y con una casa.</p>
+                <p class="margen_entre_parrafos">Se dividen en tres grupos: planetas personales, planetas sociales y planetas transpersonales o espirituales</p>
+                <h3>Planetas personales</h3>
+                <p class="margen_entre_parrafos">Son los planetas de movimineto más rápido desde una perspectiva terrestre y reflejan, por tanto, los rasgos más característicos de la personalidad, influyendo de forma distinta en cada individuo y mostrando las cualidades que mejor se pueden controlar de forma consciente. Indican necesidades individuales básicas que necesitan ser atendidas, así como el potencial de la persona.</p>
+                <h3>Planetas espirituales</h3>
+                <p class="margen_entre_parrafos">También llamados transpersonales, son los planetas de movimiento más lento e influyen en generaciones enteras. Simbolizan las energías transformadoras que conducen al cambio y que se manifiestan en forma de inspiración y de intuición. Nos impulsan al perfeccionamiento del inconsciente colectivo más profundo, buscando la evolución de la humanidad como grupo y provocando verdaderas revoluciones a nivel generacional.</p>
+                <h3>Planetas sociales</h3>
+                <p class="margen_entre_parrafos">Describen el vínculo de la persona con el contexto social y cultural en el que ha nacido. De carácter colectivo-consciente, representan las motivaciones sociales del individuo y su manera de participar en el mundo, reflejando sus aptitudes y actitudes para la integración en la sociedad.</p>
+                <h3 class="texto_center margen_secciones_intros">¿Qué es un planeta retrógrado?</h3>
+                <p class="margen_entre_parrafos">Un <strong>planeta retrógrado</strong>, según la astronomía, es un fenómeno que sucede cuando, por la forma de la órbita de algunos de nuestros compañeros del sistema solar, pareciera que <strong>van en dirección contraria a la habitual</strong>. Es decir, desde la Tierra observamos como el planeta se mueve hacia detrás durante un periodo de tiempo. En realidad, sabemos que se trata de un efecto óptico. Los planetas jamás invierten su trayectoria orbital.</p>
+                <p class="margen_entre_parrafos">Aunque para la astrología, este fenómeno tiene mucha más importancia. Cuando un planeta se encuentra en su periodo de retrogradación, <strong>su energía se invierte</strong>. Aquello en lo que impulsaba, frena. Y en aquello, en lo que aparecía como un obstáculo, ahora funciona como un trampolín.</p>
+                <p class="margen_entre_parrafos">Esta forma alternativa de funcionar suele causar grandes problemas a los signos, aunque también les ofrece la posibilidad de explorar su identidad de una forma diferente a la habitual, de revisitar el pasado y de operar cambios transcendentales en sus vidas. </p>
+                <section class="flex_horizontal items_space_around_stretch flex_wrap margen_horizontal_bloques card_background contenedor_bordes_circulares">
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/sol.png" alt="Sol">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Sol</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Leo</p>
+                            <p class="margen_entre_parrafos">El Sol habla de núcleo real de la persona, el sí mismo interior, aquello que es de importancia central. También nos muestra la vitalidad general y la habilidad para auto afirmarse, describe la tonalidad general del ser que colorea todo lo demás.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/luna.png" alt="Luna">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Luna</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Cáncer</p>
+                            <p class="margen_entre_parrafos">La Luna representa nuestros sentimientos y emociones, la receptividad, la imaginación y la tonalidad básica de los sentimientos de la persona. También tiene un efecto sobre el sentido del ritmo, el tiempo y la oportunidad, influye sobre nuestra adaptabilidad al cambio, nuestra movilidad y versatilidad.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/mercurio.png" alt="Mercurio">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Mercurio</h3>
+                            <p class="cursiva texto_center">Signos equivalentes: Géminis y Virgo</p>
+                            <p class="margen_entre_parrafos">Mercurio representa a la razón, racionabilidad (sentido común), aquello que es racional. Simboliza la palabra hablada y escrita, a la manera de poner orden, sopesar y evaluar, al proceso y a las habilidades de aprendizaje.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/venus.png" alt="Venus">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Venus</h3>
+                            <p class="cursiva texto_center">Signos equivalentes: Libra y Tauro</p>
+                            <p class="margen_entre_parrafos">Venus nos da el sentido de la belleza, el disfrute del placer, la conciencia estética, amor por la armonía, la sociabilidad, la obtención de placer en las relaciones y el erotismo.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/marte.png" alt="Marte">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Marte</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Aries</p>
+                            <p class="margen_entre_parrafos">Marte representa la energía y el instinto de una persona, su coraje, determinación, la libertad del impulso espontáneo. También describe la prontitud a la acción, la manera en que uno emprende las cosas así como la simple agresión.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/jupiter.png" alt="Júpiter">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Júpiter</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Sagitario</p>
+                            <p class="margen_entre_parrafos">La búsqueda de propósito y significado individual, el optimismo, la esperanza y el sentido de justicia están representados por Júpiter. También la fe, la filosofía básica de la vida, el esfuerzo por crecer espiritualmente y la expansión.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/saturno.png" alt="Saturno">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Saturno</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Capricornio</p>
+                            <p class="margen_entre_parrafos">Saturno muestra cómo experimentamos "la realidad", dónde encontramos resistencia y descubrimos nuestras limitaciones. Representa la convicción consciente y moral, las leyes y las reglas que elegimos obedecer. También habla de nuestro poder para tolerar y la habilidad para concentrar, da cualidades como la honestidad, la cautela y la reserva.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/urano.png" alt="Urano">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Urano</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Acuario</p>
+                            <p class="margen_entre_parrafos">Urano simboliza la intuición, transmite la inspiración repentina y la comprensión instantánea. La apertura por todo lo nuevo, desconocido e inusual. También se lo asocia con una suerte de rebeldía obstinada. Se dice que es representativo de la astrología.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/neptuno.png" alt="Neptuno">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Neptuno</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Piscis</p>
+                            <p class="margen_entre_parrafos">Este planeta otorga lo suprasensorial, abre las puertas a la experiencia mística y a lo trascendental. En este nivel es difícil discernir dónde la percepción se confunde con la decepción, la ilusión y las falsas apariencias, y por lo tanto Neptuno está asociado con todas estas, con las drogas y todo tipo de pseudo realidades.</p>
+                        </div>
+                    </article>
+                    <article class="flex_horizontal imagenes_planetas width_flex_wrap_4_columnas items_centro">
+                        <div class="imagenes">
+                            <img src="images/planetas/pluton.png" alt="Plutón">
+                        </div>
+                        <div class="width_completo margen_horizontal_divs">
+                            <h3 class="texto_center">Plutón</h3>
+                            <p class="cursiva texto_center">Signo equivalente: Escorpio</p>
+                            <p class="margen_entre_parrafos">Plutón describe cómo manejamos el poder, personal y no personal, ya sea sufriendo el poder de los demás o ejerciéndolo nosotros mismos. Describe cómo vamos al encuentro de lo demoníaco y lo mágico, nuestro poder de regeneración y nuestra capacidad de cambio radical y de renacimiento: los ciclos de muerte y transformación.</p>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </section>
+
+        <hr>
+
+        <!-- bloque ustedes-->
+        <section id="ustedes" class="margen_entre_bloques ancla_para_nav_fijo">
+            <h2 class="texto_center">¡Este espacio es para vos!</h2>
+            <p class="texto_center margen_entre_parrafos">Podés comunicarte con nosotros llenando el formulario y te contactaremos lo mas pronto posible. Dejanos tu consulta, idea, propuesta, comentario, ¡Siempre es bienvenido!</p>
+            <!-- formulario de nombre, email y comentario-->
+            <form>
+                <div class="flex_horizontal items_centro">
+                    <div class="margen_entre_bloques padding_divs card_background">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                    </div>
+                    <div class="margen_entre_bloques padding_divs card_background">
+                        <label for="email">Tu email:</label>
+                        <input type="text" id="email" name="email" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                    </div>
+                </div>
+                <div class="card_background items_centro display_flex">
+                    <label for="comentario"></label>
+                    <textarea id="comentario" name="comentario" minlength="1" class="scrollable contenedor_bordes_circulares_2"></textarea>
+                </div>
+                <div class="items_centro display_flex margen_entre_bloques">
+                    <input type="submit" value="Enviar" class="contenedor_bordes_circulares_2 bordes_violeta botones size_botones">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- pie de pagina para contacto de redes sociales -->
+    <footer class="pie_de_pagina padding_footer">
+        <div class="flex_horizontal items_centro pie_de_pagina_texto">
+            <a href="#">
+                <img src="images/logo.png" class="imagen_footer" alt="logo">
+            </a>
+            <h3>k_astrospedia</h3>
+        </div>
+        <p class="pie_de_pagina_texto texto_center margen_entre_parrafos">¡Seguinos en nuestras redes sociales!</p>
+        <ul class="redes_sociales flex_horizontal margen_horizontal items_centro">
+            <li>
+                <a href='https://www.facebook.com' target="_blank">
+                    <img src="images/redes_sociales/facebook.png" alt="logo facebook">
+                </a>
+            </li>
+            <li>
+                <a href='https://www.instagram.com' target="_blank">
+                    <img src="images/redes_sociales/instagram.png" alt="logo instagram">
+                </a>
+            </li>
+            <li>
+                <a href='https://www.twitter.com' target="_blank">
+                    <img src="images/redes_sociales/twitter.png" alt="logo twitter">
+                </a>
+            </li>
+            <li>
+                <a href='https://www.youtube.com' target="_blank">
+                    <img src="images/redes_sociales/youtube.png" alt="logo youtube">
+                </a>
+            </li>
+        </ul>
+        <p class="pie_de_pagina_texto texto_center margen_entre_parrafos">Tu privacidad es importante para nosotros. Lee nuestra política de privacidad para saber cómo protegemos tu información.</p>
+        <p class="pie_de_pagina_texto texto_center margen_entre_parrafos">© 2024 k_astropedia. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
