@@ -92,7 +92,7 @@ ul {
 .margen_entre_bloques {
     margin: 30px;
 }
-.margen_entre_parrafos {
+section p, section article p, section article div p, footer p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
