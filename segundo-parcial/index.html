@@ -23,6 +23,7 @@
             <ul class="flex_horizontal margen_horizontal items_centro barrita_navegacion fondo_circular">
                 <li><a href="#signos">Signos</a></li>
                 <li><a href="#planetas">Planetas</a></li>
+                <li><a href="#ascendente">Calcular Ascendente</a></li>
                 <li><a href="#ustedes">¡Ustedes!</a></li>
             </ul>
         </nav>
@@ -194,18 +195,17 @@
         <hr>
 
         <!-- bloque planetas-->
-        <section id="planetas" class="margen_entre_bloques ancla_para_nav_fijo">
-              
-            <article>
-                <div>
-                    <img src="images/planetas/planetas.jpg" alt="Sol">
-                </div>
+        <section id="planetas" class="margen_entre_bloques ancla_para_nav_fijo ">
+            <article class="flex_horizontal items_centro">
                 <div>
                     <h2 class="texto_center">Planetas</h2>
                     <p>La astrología considera que la humanidad no sólo está influenciada por los factores hereditarios y por el medio ambiente, sino también por el <strong>estado de nuestro sistema solar</strong> en el momento del nacimiento. Los <strong>planetas</strong> se consideran las fuerzas básicas de la vida, las herramientas que utilizamos para vivir, así como la base de nuestra misma sustancia. Estas fuerzas planetarias toman distintas formas, dependiendo de su ubicación en el zodíaco y de la manera en que se relacionan entre ellas.</p>
                     <p>Los aspectos que se forman entre los planetas describen estas relaciones; la posición de los planetas en relación con el lugar de nacimiento nos habla de su expresión en las esferas de la vida descriptas por las casas astrológicas.</p>
                     <p>Interpretando el rol de estos actores (los planetas) y sus cualidades (los elementos, signos y casas) y creando una síntesis, la astrología puede presentar un cuadro completo y comprensivo de la persona y su potencial, basado en el horóscopo natal.</p>
                     <p>En la astrología hay 10 planetas, los cuales incluyen al Sol y la Luna, conocidos como las luminarias. Dichos planetas no incluyen a la Tierra. A su vez, cada planeta corresponde con un signo y con una casa.</p>
+                </div>
+                <div class="margen_entre_bloques">
+                    <img src="images/planetas/planetas.jpg" alt="planetas" class="imagen_planetas contenedor_bordes_circulares_2 bordes_violeta">
                 </div>
             </article>
             <section class="flex_horizontal items_space_around_stretch flex_wrap margen_horizontal_bloques card_background contenedor_bordes_circulares">
@@ -313,6 +313,32 @@
         </section>
 
         <hr>
+
+        <!-- bloque calcular signo ascendente-->
+        <section id="ascendente" class="margen_entre_bloques ancla_para_nav_fijo">
+            <h2 class="texto_center">¡Conocé cuál es tu ascendente!</h2>
+            <p class="texto_center margen_entre_parrafos">Podés comunicarte con nosotros llenando el formulario y te contactaremos lo mas pronto posible. Dejanos tu consulta, idea, propuesta, comentario, ¡Siempre es bienvenido!</p>
+            <!-- formulario de nombre, email y comentario-->
+            <form>
+                <div class="flex_horizontal items_centro">
+                    <div class="margen_entre_bloques padding_divs card_background">
+                        <label for="nombre">Tu nombre:</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                    </div>
+                    <div class="margen_entre_bloques padding_divs card_background">
+                        <label for="email">Tu email:</label>
+                        <input type="text" id="email" name="email" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                    </div>
+                </div>
+                <div class="card_background items_centro display_flex">
+                    <label for="comentario"></label>
+                    <textarea id="comentario" name="comentario" minlength="1" class="scrollable contenedor_bordes_circulares_2"></textarea>
+                </div>
+                <div class="items_centro display_flex margen_entre_bloques">
+                    <input type="submit" value="Enviar" class="contenedor_bordes_circulares_2 bordes_violeta botones size_botones">
+                </div>
+            </form>
+        </section>
 
         <!-- bloque ustedes-->
         <section id="ustedes" class="margen_entre_bloques ancla_para_nav_fijo">

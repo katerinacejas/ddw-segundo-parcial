@@ -134,6 +134,12 @@ section p, section article p, section article div p, footer p {
     width: 450px;
     display: block;
 }
+.imagen_planetas {
+    height: 300px;
+    object-fit: cover;
+    width: 600px;
+    display: block;
+}
 .texto_center {
     text-align: center;
 }
@@ -201,30 +207,9 @@ p {
     align-items: stretch;
     justify-content: space-around;
 }
-td, th {  
-    padding: 10px;
-    border-bottom: 3px solid #8C6FF7;
-} 
-table {
-    border-spacing: 0;
-    border-collapse: separate;
-    border-radius: 25px;
-    text-align: center;
-    border: 3px solid #8C6FF7;
-}
-th, .size_botones {
+
+.size_botones {
     font-size: 18px;
-}
-aside {
-    float: right;
-    margin-left: 30px;
-    width: 35%;
-}
-.ultima_fila_tabla td {
-    border-bottom: 0;
-}
-.header_tabla th {
-    font-weight: normal;
 }
 .card_background article , .card_background input, .card_background textarea{
     background-color: #f8f8f8;
@@ -275,9 +260,6 @@ footer ul li {
 .padding_footer {
     padding-top: 50px;
     padding-bottom: 50px;
-}
-.perfil {
-    margin-right: 30px;
 }
 .ancla_para_nav_fijo:before {
     display: block;
