@@ -316,29 +316,40 @@
 
         <!-- bloque calcular signo ascendente-->
         <section id="ascendente" class="margen_entre_bloques ancla_para_nav_fijo">
-            <h2 class="texto_center">¡Conocé cuál es tu ascendente!</h2>
-            <p class="texto_center margen_entre_parrafos">Podés comunicarte con nosotros llenando el formulario y te contactaremos lo mas pronto posible. Dejanos tu consulta, idea, propuesta, comentario, ¡Siempre es bienvenido!</p>
-            <!-- formulario de nombre, email y comentario-->
+            <h2 class="texto_center">¡Conocé cuál es tu Signo Ascendente!</h2>
+            <p class="texto_center margen_entre_parrafos">El <strong>Signo Ascendente</strong> es el signo del zodiaco o constelación que se alzaba en el horizonte oriental en el momento exacto del nacimiento. Representa nuestro yo externo, cómo nos ven los otros, la primera impresión que damos y cómo nos proyectamos a los demás. Pero también nos habla de la apariencia física, de la infancia y de cómo iniciamos relaciones o viajes</p>
+            <!-- formulario de nombre, fecha de nacimiento y hora de nacimiento-->
             <form>
-                <div class="flex_horizontal items_centro">
-                    <div class="margen_entre_bloques padding_divs card_background">
-                        <label for="nombre">Tu nombre:</label>
-                        <input type="text" id="nombre" name="nombre" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                <div class="asc_background contenedor_bordes_circulares_2 bordes_violeta margen_entre_bloques flex_horizontal">
+                    <div class="flex_vertical">
+                        <div class="margen_entre_bloques padding_divs card_background">
+                            <label for="nombre_ascendente">Tu nombre:</label>
+                            <input type="text" id="nombre_ascendente" name="nombre_ascendente" maxlength="100" minlength="1" class="width_input_text">
+                        </div>
+                        <div class="margen_entre_bloques padding_divs card_background">
+                            <label for="fecha_nacimiento">Tu fecha de nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="width_input_text">
+                        </div>
+                        <div class="margen_entre_bloques padding_divs card_background">
+                            <label for="hora_nacimiento">La hora de nacimiento:</label>
+                            <input type="time" id="hora_nacimiento" name="hora_nacimiento" class="width_input_text">
+                        </div>
                     </div>
-                    <div class="margen_entre_bloques padding_divs card_background">
-                        <label for="email">Tu email:</label>
-                        <input type="text" id="email" name="email" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                    <div class="texto_center items_centro display_flex flex_vertical">
+                        <h3>Tu Ascendente es:</h3>
+                        <div class="margen_entre_bloques     contenedor_bordes_circulares_2 bordes_violeta background_ascendente">
+                            <p>Géminis</p>
+                        </div>
+                        <p>Los Ascendentes en Géminis son comunicativos, curiosos y adaptables. Les gusta aprender cosas nuevas y socializar.</p>
                     </div>
-                </div>
-                <div class="card_background items_centro display_flex">
-                    <label for="comentario"></label>
-                    <textarea id="comentario" name="comentario" minlength="1" class="scrollable contenedor_bordes_circulares_2"></textarea>
                 </div>
                 <div class="items_centro display_flex margen_entre_bloques">
-                    <input type="submit" value="Enviar" class="contenedor_bordes_circulares_2 bordes_violeta botones size_botones">
+                    <input type="submit" value="Calcular" class="contenedor_bordes_circulares_2 bordes_violeta botones size_botones">
                 </div>
             </form>
         </section>
+
+        <hr>
 
         <!-- bloque ustedes-->
         <section id="ustedes" class="margen_entre_bloques ancla_para_nav_fijo">
@@ -348,17 +359,17 @@
             <form>
                 <div class="flex_horizontal items_centro">
                     <div class="margen_entre_bloques padding_divs card_background">
-                        <label for="nombre">Tu nombre:</label>
-                        <input type="text" id="nombre" name="nombre" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                        <label for="nombre_consulta">Tu nombre:</label>
+                        <input type="text" id="nombre_consulta" name="nombre_consulta" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
                     </div>
                     <div class="margen_entre_bloques padding_divs card_background">
                         <label for="email">Tu email:</label>
-                        <input type="text" id="email" name="email" maxlength="100" minlength="1" class="width_input_text contenedor_bordes_circulares_2">
+                        <input type="text" id="email" name="email" maxlength="100" class="width_input_text contenedor_bordes_circulares_2">
                     </div>
                 </div>
                 <div class="card_background items_centro display_flex">
                     <label for="comentario"></label>
-                    <textarea id="comentario" name="comentario" minlength="1" class="scrollable contenedor_bordes_circulares_2"></textarea>
+                    <textarea id="comentario" name="comentario" class="scrollable contenedor_bordes_circulares_2"></textarea>
                 </div>
                 <div class="items_centro display_flex margen_entre_bloques">
                     <input type="submit" value="Enviar" class="contenedor_bordes_circulares_2 bordes_violeta botones size_botones">
@@ -401,5 +412,6 @@
         <p class="pie_de_pagina_texto texto_center margen_entre_parrafos">Tu privacidad es importante para nosotros. Lee nuestra política de privacidad para saber cómo protegemos tu información.</p>
         <p class="pie_de_pagina_texto texto_center margen_entre_parrafos">© 2024 k_astropedia. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

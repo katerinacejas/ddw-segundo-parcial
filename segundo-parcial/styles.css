@@ -66,6 +66,10 @@ main {
     display: flex;
     flex-direction: row;
 }
+.flex_vertical {
+    display: flex;
+    flex-direction: column;
+}
 .display_flex {
     display: flex;
 }
@@ -118,7 +122,7 @@ section p, section article p, section article div p, footer p {
 .barrita_navegacion li a:active {
     color: inherit;
 }
-.fondo_circular li {
+.fondo_circular li{
     border-radius: 30px;
     padding: 3px 15px 3px 15px;
 }
@@ -140,12 +144,12 @@ section p, section article p, section article div p, footer p {
     width: 600px;
     display: block;
 }
-.texto_center {
+.texto_center , .texto_center p {
     text-align: center;
 }
-.contenedor_bordes_circulares_2 , .contenedor_bordes_circulares article{
+.contenedor_bordes_circulares_2 , .contenedor_bordes_circulares article , .contenedor_bordes_circulares_2 div div input{
     border-radius: 30px;
-    border-width: 3px;
+    border-width: 2px;
     border-style: solid;
 }
 .bordes_violeta {
@@ -207,11 +211,10 @@ p {
     align-items: stretch;
     justify-content: space-around;
 }
-
 .size_botones {
     font-size: 18px;
 }
-.card_background article , .card_background input, .card_background textarea{
+.card_background article , .card_background input, .card_background textarea, .card_background p{
     background-color: #f8f8f8;
     padding: 5px 20px 5px 20px;
     border-color: #eceaea;
@@ -267,4 +270,11 @@ footer ul li {
     margin-top: -100px;
     height: 100px;
     visibility: hidden;
+}
+.asc_background {
+    background-color: #BAF7FF;
+}
+.background_ascendente {
+    background-color: white;
+    width: 50%;
 }
