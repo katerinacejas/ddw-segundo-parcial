@@ -41,9 +41,9 @@ class Persona {
 // se crea la clase Signo
 class Signo {
     //variables
-    signo;
+    signoSolar;
     ascendente;
-    descripcionAscendente; //descripcion del ascendente del signo
+    descripcionAscendente; //descripcion del ascendente del signoSolar
     anio;
 
     //metodos
@@ -145,61 +145,89 @@ class Signo {
     }
 
     calcularAscendente(hora) {
-        // hora format: MM-ss
+        // hora format: hh-mm en formato de 24hs: 00:00 -> 23:59
 
         // extraigo los digitos de hora y minuto del string hora
         let hh = parseInt(hora.substr(0,2));
         let mm = parseInt(hora.substr(3,2));
 
         // calculo de la hora real dependiendo del año de nacimiento
-        if((anio >= 1946) & (anio <= 1976)) {
-            hh -= 1
+        /*
+            Si el año de nacimiento fue estre 1946 y 1976 hay que restarle 1 hora,
+            Si el año de nacimiento fue entre 1977 y antes del 2000, hay que restarle 2 horas,
+            En caso contrario, no se modifica la hora.
+            Si nació a las 00hs o 01am, no se puede restar 1 o 2 horas porque podría quedar negativo
+            en ese caso se valida previamente la hora, para dejarla en formato de 24hs.
+        */
+        if((anio >= 1946) && (anio <= 1976)) {
+            if(hh == 0) {
+                hh = 23
+            }
+            else {
+                hh -= 1
+            }
         }
-        if((anio > 1976) & (anio < 2000)) {
-            hh -= 2
+        if((anio > 1976) && (anio < 2000)) {
+            if(hh == 0) {
+                hh = 22
+            }
+            else if(hh == 1) {
+                hh = 23
+            }
+            else {
+                hh -= 2
+            } 
         }
 
-        // array con el orden de los signos dependiendo de cual es el solar
-        let ordenSignos = []
+        // array multidimencional con el orden de los signos dependiendo de cual es el solar(el primer signo del array)
+        // format arrayMulti: [fila][columna]
+        let ordenSignos = [
+        //         06-08   08-10    10-12    12-14   14-16  16-18   18-20    20-22      22-24         24-02       02-04    04-06
+        /*0*/    ["Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis"],
+        /*1*/    ["Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries"],
+        /*2*/    ["Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro"],
+        /*3*/    ["Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis"],
+        /*4*/    ["Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer"],
+        /*5*/    ["Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo"],
+        /*6*/    ["Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo"],
+        /*7*/    ["Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra"],
+        /*8*/    ["Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio"],
+        /*9*/    ["Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario"],
+        /*10*/   ["Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio"],
+        /*11*/   ["Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario"]
+        ]
 
-        // calculo del ascendente con los datos completos
-        switch(this.signo) {
-            case "Aries":
-                ordenSignos = ["Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis"]
+        /*
+            como previamente se calcula el signo solar, eso permite saber en cual de las filas del array multidimensional se debe evaluar el signo ascendente. 
+            Ejemplo, si el signo solar es Virgo, debo ir a ordenSignos[5] y evaluar ese array
+        */
+
+        for(let fila = 0; fila <= 11; fila++) {
+            if(this.signoSolar == ordenSignos[fila][0]) {
+                if( // significa que nació justo en el minuto 00 de alguna de las horas del limite de las franjas,
+                    ((hh==6)||(hh==8)||(hh==10)||(hh==12)||(hh==14)||(hh==16)||(hh==18)||(hh==20)||(hh==22)||(hh==24)||(hh==2)||(hh==4)) 
+                    && (mm == 0)) { 
+                        /*
+                            en caso de cumplirse, hay que tomar el rango anterior.
+                            ejemplo: si nacio a las 10:00, podría estar en el rango de las 08-10 o de las 10-12
+                            se toma siempre el anterior, en ese caso el 08-10
+                        */
+
+                }
+                else if ( // significa que nacio en una hora del limite de rango, pero que los minutos no son 0, entonces se puede tomar la hora dentro de ese rango
+                    ((hh==6)||(hh==8)||(hh==10)||(hh==12)||(hh==14)||(hh==16)||(hh==18)||(hh==20)||(hh==22)||(hh==24)||(hh==2)||(hh==4)) 
+                    && (mm != 0)) {
+
+                }
+                else { // significa que no nacio en una limite, el rango es tal cual
+
+                }
+
+
                 break;
-            case "Tauro":
-                ordenSignos = ["Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries"]
-                break;
-            case "Géminis":
-                ordenSignos = ["Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro"]
-                break;      
-            case "Cáncer":
-                ordenSignos = ["Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis"]
-                break;   
-            case "Leo":
-                ordenSignos = ["Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer"]
-                break;       
-            case "Virgo":
-                ordenSignos = ["Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo"]
-                break;  
-            case "Libra":
-                ordenSignos = ["Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo"]
-                break;                             
-            case "Escorpio":
-                ordenSignos = ["Escorpio","Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra"]
-                break; 
-            case "Sagitario":
-                ordenSignos = ["Sagitario","Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio"]
-                break;   
-            case "Capricornio":
-                ordenSignos = ["Capricornio","Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario"]
-                break;
-            case "Acuario":
-                ordenSignos = ["Acuario","Piscis","Aries","Tauro","Géminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio"]
-                break;                                                                                                                                          
+            }
         }
-        return cruceFranjaHoraria(ordenSignos);
-
+        
     }
 
     asignarDescripcion(signoAscendente) {
@@ -232,12 +260,12 @@ class Signo {
     }
 
     //setters y getters
-    set setSigno(fecha) {
-        this.signo = this.calcularSolar(fecha);
+    set setSignoSolar(fecha) {
+        this.signoSolar = this.calcularSolar(fecha);
     }
 
-    get getSigno() {
-        return this.signo;
+    get getSignoSolar() {
+        return this.signoSolar;
     }
 
     set setAscendente(hora) {
