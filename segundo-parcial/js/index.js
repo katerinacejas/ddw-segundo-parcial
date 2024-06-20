@@ -209,10 +209,10 @@ class Signo {
                     && (mm == 0)) { 
                         /*
                             en caso de cumplirse, hay que tomar el rango anterior.
-                            ejemplo: si nacio a las 10:00, podría estar en el rango de las 08-10 o de las 10-12
+                            ejemplo: si nacio a las 10:00, podría est     en el rango de las 08-10 o de las 10-12
                             se toma siempre el anterior, en ese caso el 08-10
                         */
-
+                        
                 }
                 else if ( // significa que nacio en una hora del limite de rango, pero que los minutos no son 0, entonces se puede tomar la hora dentro de ese rango
                     ((hh==6)||(hh==8)||(hh==10)||(hh==12)||(hh==14)||(hh==16)||(hh==18)||(hh==20)||(hh==22)||(hh==24)||(hh==2)||(hh==4)) 
@@ -220,7 +220,7 @@ class Signo {
 
                 }
                 else { // significa que no nacio en una limite, el rango es tal cual
-
+  
                 }
 
 
